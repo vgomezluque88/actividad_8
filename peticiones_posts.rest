@@ -1,0 +1,36 @@
+@PORT = 3306
+@HOST = http://localhost:{{PORT}}
+
+### Get All posts
+GET {{HOST}}/api/posts
+
+### Get post by Id
+GET {{HOST}}/api/posts
+
+### Get posts by Autor_id
+GET {{HOST}}/api/posts/autor
+
+### Create post
+POST {{HOST}}/api/posts
+Content-Type: application/json
+
+{
+  "titulo": "",
+  "descripcion" : "",
+  "categoria" : "",
+  "autores_id" : ""
+  }
+
+### Update post
+PUT {{HOST}}/api/posts
+Content-Type: application/json
+
+{
+    "titulo": "", 
+    "descripcion": "",
+    "categoria": "",
+    "autores_id": ""
+  }
+
+### Delete post by Id
+DELETE {{HOST}}/api/posts

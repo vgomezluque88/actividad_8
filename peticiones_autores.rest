@@ -1,0 +1,33 @@
+@PORT = 3307
+@HOST = http://localhost:{{PORT}}
+
+
+GET {{HOST}}/api/autores
+
+### Obtener autor por ID
+GET {{HOST}}/api/autores/1
+
+### Crear autor
+POST {{HOST}}/api/autores
+Content-Type: application/json
+
+{
+  "nombre": "Juan Perez", 
+  "email" : "juanperez@example.com",
+  "imagen" : "imagen1.jpg"
+}
+
+### Actualizar autor
+# Necesitas especificar el ID del autor que quieres actualizar
+PUT {{HOST}}/api/autores/6
+Content-Type: application/json
+
+{
+  "nombre": "Sofia Fernandez",
+  "email" : "sofiafernandez@example.com",
+  "imagen" : "imagen6.jpg"
+}
+
+### Borrar autor por ID
+# Necesitas especificar el ID del autor que quieres borrar
+DELETE {{HOST}}/api/autores/1
